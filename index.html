@@ -11,7 +11,8 @@
             <div class="header__left">
                 <img src="./Resources/github.svg" alt="header__logo"
                     class="header__logo">
-                <input type="text" class="header__search" placeholder="Search or jump to...">
+                <input type="text" class="header__search"
+                    placeholder="Search or jump to...">
                 <nav class="header__nav">
                     <a href="#" class="header__nav-link">Pull requests</a>
                     <a href="#" class="header__nav-link">Issues</a>
@@ -21,17 +22,85 @@
             </div>
             <div class="header__right">
                 <div class="header__icon-link">
-                    <img class="invert" src="./Resources/bell.svg" alt="Notification">
+                    <img class="invert" src="./Resources/bell.svg"
+                        alt="Notification">
                 </div>
                 <div class="header__icon-dd">
                     <img class="invert" src="./Resources/plus.svg" alt="Add">
-                    <img class="invert" src="./Resources/triangle-down.svg" alt="Add">
+                    <img class="invert" src="./Resources/triangle-down.svg"
+                        alt="Add">
                 </div>
                 <div class="header__icon-dd">
-                    <img class="header__icon-profile" src="./Resources/profile_mini.png" alt="Add">
-                    <img class="invert" src="./Resources/triangle-down.svg" alt="Add">
+                    <img class="header__icon-profile"
+                        src="./Resources/profile_mini.png" alt="Add">
+                    <img class="invert" src="./Resources/triangle-down.svg"
+                        alt="Add">
                 </div>
             </div>
         </header>
+        <main class="main">
+
+            <nav class="main__nav">
+
+            </nav>
+
+            <section class="main__content">
+
+                <!-- Profile picture, username and links. -->
+                <aside class="profile">
+                    <div class="profile__img">
+                        <img src="./Resources/profile.png" alt="Profile Image" class="profile__img-user">
+                    </div>
+                    <div class="profile__user">
+                        <h2 class="profile__user-name">Vatsal Bharkhada</h2>
+                        <h3 class="profile__user-id">Vatsal2054</h3>
+                    </div>
+                    <div class="profile__about">
+                        <p>Developer | React.js | Javascript</p>
+                    </div>
+                    <button class="profile__edit" type="button">Edit Profile</button>
+                    <div class="profile__stats">
+                        <ul class="stats__list">
+                            <li class="stats__list-item">
+                                <img src="./Resources/people.svg" alt="People icon">
+                                <b>2</b>
+                                <span>Followers</span>
+                            </li>
+                            <li class="stats__list-item">
+                                <b>10</b>
+                                <span>Following</span>
+                            </li>
+                            <li class="stats__list-item">
+                                <img src="./Resources/star.svg" alt="Star icon">
+                                <b>2</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="profile__links">
+                        <li class="link-wrapper">
+                            <img src="./Resources/organization.svg" alt="" class="link-icon">
+                            <a href="https://simform.com" class="link-main">Simform</a>
+                        </li>
+                        <li class="link-wrapper">
+                            <img src="./Resources/mail.svg" alt="" class="link-icon">
+                            <a href="mailto:vatsal.bharkhada@simformsolutions.com" class="link-main">vatsal.bharkhada@simformsolutions.com</a>
+                        </li>
+                        <li class="link-wrapper">
+                            <img src="./Resources/link.svg" alt="" class="link-icon">
+                            <a href="https://vatsalbharkhada.in" class="link-main">vatsalbharkhada.in</a>
+                        </li>
+                        <li class="link-wrapper">
+                            <img src="./Resources/github-small.svg" alt="" class="link-icon">
+                            <a href="https://github.com/vatsal2054" class="link-main">Vatsal2054</a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <!-- Pinned commts and heatmap -->
+                <section class="userInfo">
+
+                </section>
+            </section>
+        </main>
     </body>
 </html>
