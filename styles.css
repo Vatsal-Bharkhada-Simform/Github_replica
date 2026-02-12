@@ -1,0 +1,30 @@
+:root{
+    /* Backgrounds */
+    --var-color-background: #ffffff;
+    --var-color-header: #25282f;
+
+    /* Text and Icons */
+    --var-color-text: #222327;
+    --var-color-text-header: #ffffff;
+    --var-color-text-sec: #4e5158;
+    --var-color-icon-sec: #ededed;
+    --var-color-accent-blue: #0969da;
+    
+    /* Heatmap */
+    --var-color-heatmap-default: #ededed;
+    --var-color-heatmap-1: #afecb4;
+    --var-color-heatmap-2: #46c074;
+    --var-color-heatmap-3: #2da74a;
+    --var-color-heatmap-4: #115a2c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--var-color-background);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
