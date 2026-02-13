@@ -95,7 +95,7 @@ body {
     .invert {
         filter: invert();
     }
-    .header__icon-dd {
+    .header__icon-dropdown {
         display: flex;
         align-items: center;
     }
