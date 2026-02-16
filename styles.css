@@ -49,6 +49,14 @@ svg{
 svg.grey{
     color: var(--var-color-text-sec);
 }
+/* --------------- General Styles --------------- */
+.button__tertiary{
+    background: transparent;
+    border: none;
+    font-size: .9rem;
+    font-family: inherit;
+    cursor: pointer;
+}
 
 /* --------------- Header Styles ---------------- */
 .header {
