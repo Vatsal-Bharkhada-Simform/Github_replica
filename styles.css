@@ -16,6 +16,7 @@
     --var-color-icon-sec: #ededed;
     --var-color-accent-blue: #0969da;
     --text-neutral: #59636e;
+    --text-link: #0969da;
 
     /* Heatmap */
     --var-color-heatmap-default: #ededed;
@@ -37,6 +38,15 @@ body {
     font-family:
         -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji",
         "Segoe UI Emoji";
+}
+
+/* --------------- General Styles --------------- */
+.button__tertiary{
+    background: transparent;
+    border: none;
+    font-size: .9rem;
+    font-family: inherit;
+    cursor: pointer;
 }
 
 /* --------------- Header Styles ---------------- */
@@ -142,10 +152,10 @@ body {
             li {
                 padding: .9rem 1rem;
                 
-                a {
+                a, a:link, a:visited {
                     text-decoration: none;
                     font-size: .9rem;
-                    color: var(--text-neutral);
+                    color: inherit;
                     font-weight: 400;
 
                     svg {
@@ -158,7 +168,6 @@ body {
                     border-bottom: 2px solid orange;
 
                     a {
-                        color: inherit;
                         font-weight: 600;
                     }
                 }
@@ -168,6 +177,7 @@ body {
 }
 
 .main__content {
+    width: 65vw;
     min-width: 65vw;
     display: grid;
     grid-template-columns: 312px 1fr;
@@ -197,11 +207,11 @@ body {
 
 .profile__status{
     position: absolute;
-    right: .4rem;
-    top: 76%;
+    right: .5rem;
+    top: 72%;
     background: var(--var-color-background);
     display: inline;
-    padding: .6rem .65rem .4rem .6rem;
+    padding: .6rem .6rem .25rem .6rem;
     border: 1px solid var(--borderColor-default);
     border-radius: 50%;
 }
@@ -220,6 +230,7 @@ body {
     border-radius: 0.4rem;
     font-size: 0.9rem;
     font-weight: 500;
+    font-family: inherit;
 
     &:hover {
         cursor: pointer;
@@ -275,5 +286,96 @@ body {
 }
 
 .userInfo {
-    flex: 12;
+    padding: 1.5rem 1rem 1rem 1rem;
+}
+
+.pinned{
+
+    .pinned__head {
+        display: flex;
+        justify-content: space-between;
+
+        h4{
+            font-weight: 500;
+        }
+
+        button{
+            color: var(--text-neutral);
+        }
+    }
+
+    .pinned__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: .5rem 0;
+
+        .pinned__repo{
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            border: 1px solid var(--borderColor-default);
+            border-radius: 6px;
+
+            .pinned__repo-head {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: .5rem;
+
+                .pinned__repo-link{
+                    text-decoration: none;
+                    font-size: .9rem;
+                    font-weight: 700;
+                    color: var(--text-link);
+                }
+                
+                svg{
+                    margin: 0 3px -3px 0;
+                }
+            }
+
+            .pinned__repo-description{
+                font-size: .8rem;
+                color: var(--text-neutral);
+                line-height: 1.4;
+                flex-grow: 1;
+            }
+            
+            .pinned__repo-info{
+                padding-top: .8rem;
+                color: var(--text-neutral);
+                font-weight: 500;
+
+                .language{
+                    font-size: .8rem;
+
+                    .language-marker-html{
+                        display: inline-block;
+                        width: .8rem;
+                        aspect-ratio: 1/1;
+                        margin-bottom: -1px;
+                        border-radius: 50%;
+                        background-color: orangered;
+                    }
+                    
+                    .language-marker-css{
+                        display: inline-block;
+                        width: .8rem;
+                        aspect-ratio: 1/1;
+                        margin-bottom: -1px;
+                        border-radius: 50%;
+                        background-color: midnightblue;
+                    }
+                }
+
+                .stars, .forks{
+                    font-size: .8rem;
+                    margin-left: 1rem;
+                    svg{
+                        margin-bottom: -3px;
+                    }
+                }
+            }
+        }
+    }
 }
