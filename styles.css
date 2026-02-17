@@ -41,12 +41,40 @@ body {
 }
 
 /* --------------- General Styles --------------- */
-.button__tertiary{
+.button__inline{
     background: transparent;
     border: none;
     font-size: .9rem;
     font-family: inherit;
     cursor: pointer;
+}
+
+.button__primary{
+    background: var(--var-color-accent-blue);
+    border: none;
+    font-size: .75rem;
+    font-family: inherit;
+    cursor: pointer;
+    padding: .6rem 1rem;
+    border-radius: .4rem;
+    text-align: left;
+    color: var(--var-color-text-header);
+}
+
+.button__tertiary{
+    background: transparent;
+    border: none;
+    font-size: .75rem;
+    font-family: inherit;
+    cursor: pointer;
+    padding: .6rem 1rem;
+    border-radius: .4rem;
+    text-align: left;
+    color: var(--var-color-text-sec);
+
+    &:hover{
+        background: var(--button-default-bgColor-hover);
+    }
 }
 
 /* --------------- Header Styles ---------------- */
@@ -377,5 +405,17 @@ body {
                 }
             }
         }
+    }
+}
+
+.contribution{
+    margin-top: 2rem;
+
+    h4{
+        font-weight: 500;
+    }
+
+    .heatmap{
+        padding: .6rem 0 1rem 0;
     }
 }

@@ -196,12 +196,14 @@
                     </ul>
                 </aside>
 
-                <!-- Pinned repositories and heatmap -->
+                <!-- Pinned repositories and contributions -->
                 <section class="userInfo">
-                    <div class="pinned">
+
+                    <!-- Pinned Repositories -->
+                    <section class="pinned">
                         <div class="pinned__head">
                             <h4>Pinned</h4>
-                            <button type="button" class="button__tertiary">Customize your pins</button>
+                            <button type="button" class="button__inline">Customize your pins</button>
                         </div>
                         <div class="pinned__list">
                             <div class="pinned__repo">
@@ -258,7 +260,7 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="#59636e" viewBox="0 0 16 16" width="16" height="16"><path d="M10 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm0-4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm-4 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm5-9a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM7 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"></path></svg>
                                     </span>
                                 </div>
-                                <div class="pinned__repo-description">Explore how to: add contrast, use continuity, align items, group elements together and ensure good readability.</div>
+                                <div class="pinned__repo-description">Explore how to: add contrast, use continuity, align items, etc.</div>
                                 <div class="pinned__repo-info">
                                     <span class="language">
                                         <div class="language-marker-html"></div>
@@ -285,7 +287,18 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
+
+                    <!-- Contributions -->
+                    <section class="contribution">
+                        <h4 class="contribution__head">75 contributions in the last year</h4>
+                        <div class="heatmap">
+                            <img src="/Resources/heatmap.png" alt="Heatmap">
+                        </div>
+                        <div class="activity">
+                            
+                        </div>
+                    </section>
                 </section>
             </section>
         </main>
