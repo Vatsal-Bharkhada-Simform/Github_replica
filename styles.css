@@ -86,6 +86,33 @@ svg.grey{
     }
 }
 
+.language-marker-html{
+    display: inline-block;
+    width: .8rem;
+    aspect-ratio: 1/1;
+    margin-bottom: -1px;
+    border-radius: 50%;
+    background-color: orangered;
+}
+
+.language-marker-css{
+    display: inline-block;
+    width: .8rem;
+    aspect-ratio: 1/1;
+    margin-bottom: -1px;
+    border-radius: 50%;
+    background-color: midnightblue;
+}
+
+.language-marker-typescript{
+    display: inline-block;
+    width: .8rem;
+    aspect-ratio: 1/1;
+    margin-bottom: -1px;
+    border-radius: 50%;
+    background-color: steelblue;
+}
+
 /* --------------- Header Styles ---------------- */
 .header {
     padding: 1rem 2rem;
@@ -450,5 +477,126 @@ svg.grey{
 
     .heatmap{
         padding: .6rem 0 1rem 0;
+    }
+
+    .activity{
+        display: grid;
+        grid-template-columns: 1fr 118px;
+        gap: 2rem;
+
+        .activity__info{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            
+            .timestamp{
+                border-bottom: 1px solid var(--borderColor-default);
+                font-size: .75rem;
+                font-weight: bold;
+                color: var(--var-color-text-sec);
+                
+                .timestamp__date{
+                    display: inline-block;
+                    padding: 0 1rem 0 .6rem;
+                    background: var(--var-color-background);
+                    transform: translateY(60%);
+                }
+
+                .timestamp__date-month{
+                    color: var(--var-color-text);
+                }
+            }
+
+            .summary{
+                margin-left: 1rem;
+                border-left: 2px solid var(--borderColor-default);
+                padding: 1.2rem 0 1.2rem 1.4rem;
+                position: relative;
+
+                .summary__head{
+                    h4{
+                        display: inline;
+                    }
+                    .expand__icon{
+                        display: inline;
+                        float: right;
+                        color: var(--text-neutral);
+                    }
+                }
+
+                .summary__icon{
+                    display: inline;
+                    position: absolute;
+                    width: 2rem;
+                    aspect-ratio: 1/1;
+                    top: 1rem;
+                    left: -1rem;
+                    background: var(--button-default-bgColor-hover);
+                    border-radius: 50%;
+                    border: 2px solid var(--var-color-background);
+                    
+                    svg{
+                        color: var(--text-neutral);
+                        margin-bottom: -.6rem;
+                        margin-left: .4rem;
+                    }
+                }
+
+                .summary__details{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 1rem;
+                    font-size: .9rem;
+
+                    .repository{
+                        flex: 4;
+
+                        a{
+                            text-decoration: none;
+                            color: var(--text-link);
+                        }
+
+                        svg{
+                            color: var(--text-neutral);
+                            margin-bottom: -4px;
+                        }
+                    }
+
+                    .language, .date{
+                        font-size: .8rem;
+                        flex: 1;
+                        color: var(--text-neutral);
+                    }
+
+                    .date{
+                        text-align: right;
+                    }
+                }
+            }
+
+            .activity__button{
+                padding: .6rem;
+                width: 100%;
+                color: var(--text-link);
+                font-size: .8rem;
+                border: 1px solid var(--button-default-borderColor-active);
+                background: inherit;
+                border-radius: .4rem;
+                font-weight: 600;
+                margin-top: .6rem;
+            }
+        }
+
+        .activity__years{
+            
+            button{
+                display: block;
+                width: 100%;
+
+                &:not(:first-child){
+                    margin-top: .4rem;
+                }
+            }
+        }
     }
 }
