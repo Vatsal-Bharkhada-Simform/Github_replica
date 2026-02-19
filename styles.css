@@ -584,6 +584,10 @@ svg.grey{
                 border-radius: .4rem;
                 font-weight: 600;
                 margin-top: .6rem;
+
+                &:hover{
+                    background: var(--button-default-bgColor-rest);
+                }
             }
         }
 
