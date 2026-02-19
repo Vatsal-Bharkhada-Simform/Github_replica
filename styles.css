@@ -87,12 +87,22 @@ body {
 .header__right {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: .6rem;
     line-height: 0;
+
+    div{
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:not(:last-child){
+            padding: .4rem;
+        }
+    }
 
     .invert {
         filter: invert();
     }
+
     .header__icon-dropdown {
         display: flex;
         align-items: center;
@@ -168,6 +178,7 @@ body {
         display: flex;
         align-items: center;
         gap: 6px;
+        cursor: pointer;
 
         svg {
             color: var(--var-color-text-sec) !important;
