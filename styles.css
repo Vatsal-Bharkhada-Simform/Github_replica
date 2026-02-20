@@ -60,6 +60,7 @@ svg{
         width: 40px;
         filter: invert();
         cursor: pointer;
+        vertical-align: middle;
     }
 
     .header__search {
@@ -95,7 +96,7 @@ svg{
     gap: .6rem;
     line-height: 0;
 
-    div{
+    a{
         cursor: pointer;
         border-radius: 4px;
 
@@ -190,8 +191,13 @@ svg{
         gap: 6px;
         cursor: pointer;
 
+        a, a:link, a:visited{
+            text-decoration: none;
+            color: inherit;
+        }
 
         svg {
+            vertical-align: middle;
             color: var(--var-color-text-sec);
         }
     }
