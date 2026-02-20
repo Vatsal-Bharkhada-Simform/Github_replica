@@ -206,7 +206,7 @@ svg{
 .profile__links{
     list-style-type: none;
 
-    li{
+    .link__wrapper{
         display: flex;
         align-items: center;
         gap: .6rem;
@@ -217,9 +217,13 @@ svg{
             text-decoration: none;
             color: inherit;
         }
+
+        a:hover{
+            text-decoration: underline;
+        }
     }
 }
 
-.userInfo {
+.user__info {
     flex: 3;
 }
