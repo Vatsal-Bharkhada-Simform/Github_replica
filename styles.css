@@ -59,6 +59,7 @@ svg{
     .header__logo {
         width: 40px;
         filter: invert();
+        cursor: pointer;
     }
 
     .header__search {
