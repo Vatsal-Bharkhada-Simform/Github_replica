@@ -164,7 +164,7 @@ svg{
             display: flex;
             padding-left: 1rem;
 
-            li {
+            .main__header-links {
                 padding: .9rem 1rem;
                 
                 a, a:link, a:visited {
@@ -174,7 +174,6 @@ svg{
                     font-weight: 400;
 
                     svg {
-                        margin-bottom: -4px;
                         margin-right: 3px;
                     }
 
@@ -270,10 +269,6 @@ svg{
     font-size: 0.8rem;
     color: var(--var-color-text-sec);
 
-    b {
-        color: #222327;
-    }
-
     .stats__list-item {
         display: flex;
         align-items: center;
@@ -283,15 +278,18 @@ svg{
         a, a:link, a:visited{
             text-decoration: none;
             color: inherit;
+            
+            b {
+                color: #222327;
+            }
         }
 
         svg {
-            vertical-align: middle;
             color: var(--var-color-text-sec);
         }
     }
 
-    li + li::before {
+    .stats__list-item + .stats__list-item::before {
         content: "·";
         margin: 0 -2px 0px 4px;
         color: #6b7280; 
