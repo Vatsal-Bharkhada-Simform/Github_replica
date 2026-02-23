@@ -328,7 +328,8 @@ svg{
         display: flex;
         justify-content: space-between;
 
-        h4{
+        h3{
+            font-size: 1rem;
             font-weight: 500;
         }
 
@@ -360,11 +361,7 @@ svg{
                     font-size: .9rem;
                     font-weight: 700;
                     color: var(--text-link);
-                }
-                
-                svg{
-                    margin: 0 3px -3px 0;
-                }
+                }   
             }
 
             .pinned__repo-description{
@@ -381,6 +378,7 @@ svg{
 
                 .language{
                     font-size: .8rem;
+                    display: inline-block;
 
                     .language-marker-html{
                         display: inline-block;
@@ -404,9 +402,6 @@ svg{
                 .stars, .forks{
                     font-size: .8rem;
                     margin-left: 1rem;
-                    svg{
-                        margin-bottom: -3px;
-                    }
                 }
             }
         }
