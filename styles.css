@@ -41,8 +41,19 @@ body {
 }
 
 svg{
+    width: 1rem;
+    aspect-ratio: 1/1;
     vertical-align: middle;
 }
+
+svg.dark{
+    color: var(--var-color-text);
+}
+
+svg.grey{
+    color: var(--var-color-text-sec);
+}
+
 /* --------------- General Styles --------------- */
 .button__tertiary{
     background: transparent;
@@ -230,7 +241,7 @@ svg{
     top: 72%;
     background: var(--var-color-background);
     display: inline;
-    padding: .6rem .6rem .25rem .6rem;
+    padding: .55rem .6rem;
     border: 1px solid var(--borderColor-default);
     border-radius: 50%;
 }
@@ -282,10 +293,6 @@ svg{
             b {
                 color: #222327;
             }
-        }
-
-        svg {
-            color: var(--var-color-text-sec);
         }
     }
 
