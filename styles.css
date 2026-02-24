@@ -159,8 +159,8 @@ svg.grey{
     display: grid;
     grid-template-columns: 312px 1fr;
 
-    width: 65vw;
-    min-width: 65vw;
+    width: 100%;
+    max-width: 1200px;
     padding-top: 1.4rem;
     margin: 0 auto;
 
@@ -202,8 +202,8 @@ svg.grey{
 }
 
 .main__content {
-    width: 65vw;
-    min-width: 65vw;
+    width: 100%;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: 312px 1fr;
 }
