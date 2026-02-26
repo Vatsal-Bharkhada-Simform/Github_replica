@@ -439,24 +439,6 @@ svg.grey{
                 .language{
                     font-size: .8rem;
                     display: inline-block;
-
-                    .language-marker-html{
-                        display: inline-block;
-                        width: .8rem;
-                        aspect-ratio: 1/1;
-                        margin-bottom: -1px;
-                        border-radius: 50%;
-                        background-color: orangered;
-                    }
-                    
-                    .language-marker-css{
-                        display: inline-block;
-                        width: .8rem;
-                        aspect-ratio: 1/1;
-                        margin-bottom: -1px;
-                        border-radius: 50%;
-                        background-color: midnightblue;
-                    }
                 }
 
                 .stars, .forks{
@@ -471,12 +453,17 @@ svg.grey{
 .contribution{
     margin-top: 2rem;
 
-    h4{
+    .contribution__head{
         font-weight: 500;
     }
 
     .heatmap{
         padding: .6rem 0 1rem 0;
+        overflow: auto;
+
+        img{
+            max-width: 100%;
+        }
     }
 
     .activity{
