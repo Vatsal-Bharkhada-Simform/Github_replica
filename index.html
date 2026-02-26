@@ -30,47 +30,82 @@
         <meta name="hovercards-preference" content="true">
         <meta name="announcement-preference-hovercard" content="true">
         <meta name="expected-hostname" content="github.com">
-
-        <link rel="canonical" href="https://github.com/Vatsal-Bharkhada-Simform" data-turbo-transient>
     </head>
     <body>
         <header class="header">
             <div class="header__left">
-                <a href="#" title="Go to home">
+                <a href="#" title="Go to homepage" aria-label="Go to homepage">
                     <img src="./Resources/github.svg" alt="GitHub logo"
                     class="header__logo">
                 </a>
-                <input type="text" class="header__search"
-                    placeholder="Search or jump to...">
+                <input type="search" class="header__search"
+                    placeholder="Search or jump to..." aria-label="Search">
                 <nav class="header__nav">
-                    <a href="#" title="Pull requests">Pull requests</a>
-                    <a href="#" title="Issues">Issues</a>
-                    <a href="#" title="Marketplace">Marketplace</a>
-                    <a href="#" title="Explore">Explore</a>
+                    <a href="#">Pull requests</a>
+                    <a href="#">Issues</a>
+                    <a href="#">Marketplace</a>
+                    <a href="#">Explore</a>
                 </nav>
             </div>
             <div class="header__right">
-                <a href="#" title="Notifications" tabindex="0">
+                <a href="#" title="Notifications" aria-label="Notifications">
                     <img class="invert" src="./Resources/bell.svg"
-                        alt="Notification">
+                        alt="Notification icon">
                 </a>
-                <a href="#" title="Create new" class="header__icon-dropdown" tabindex="0">
+                <a href="#" title="Create new" class="header__icon-dropdown" aria-label="Add new">
                     <img class="invert" src="./Resources/plus.svg" alt="Add icon">
                     <img class="invert" src="./Resources/triangle-down.svg"
                         alt="Down arrow icon">
                 </a>
-                <a href="#" title="Profile" class="header__icon-dropdown" tabindex="0">
+                <a href="#" title="Profile" class="header__icon-dropdown" aria-label="Profile">
                     <img class="header__icon-profile"
-                        src="./Resources/profile_mini.png" alt="Profile Image">
+                        src="./Resources/profile_mini.png" alt="Profile Image Mini">
                     <img class="invert" src="./Resources/triangle-down.svg"
                         alt="Down arrow icon">
                 </a>
             </div>
         </header>
         <main class="main">
-
-            <nav class="main__nav">
-
+            <nav class="main__header">
+                <div class="main__header-wrapper">
+                    <div class="main__header-blankPart"></div>
+                    <nav class="main__header-nav">
+                        <ul>
+                            <li class="main__header-links">
+                                <a href="#">
+                                    <svg>
+                                        <use href="/Resources/sprite.svg#overview"></use>
+                                    </svg>
+                                    Overview
+                                </a>
+                            </li>
+                            <li class="main__header-links">
+                                <a href="#">
+                                    <svg class="grey">
+                                        <use href="/Resources/sprite.svg#repositories"></use>
+                                    </svg>
+                                    Repositories
+                                </a>
+                            </li>
+                            <li class="main__header-links">
+                                <a href="#">
+                                    <svg class="grey">
+                                        <use href="/Resources/sprite.svg#projects"></use>
+                                    </svg>
+                                    Projects
+                                </a>
+                            </li>
+                            <li class="main__header-links">
+                                <a href="#">
+                                    <svg class="grey">
+                                        <use href="/Resources/sprite.svg#packages"></use>
+                                    </svg>
+                                    Packages
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </nav>
 
             <section class="main__content">
@@ -80,20 +115,25 @@
                     <div class="profile__img">
                         <img src="./Resources/profile.png" alt="Profile Image"
                             class="profile__img-user">
+                        <div class="profile__status">
+                            <svg>
+                                <use href="/Resources/sprite.svg#smiley"></use>
+                            </svg>
+                        </div>
                     </div>
-                    <div class="profile__user">
+                    <div>
                         <h1 class="profile__user-name">Vatsal Bharkhada</h1>
                         <h2 class="profile__user-id">Vatsal2054</h2>
                     </div>
-                    <div class="profile__about">
+                    <div>
                         <p>Developer | React.js | Javascript</p>
                     </div>
-                    <button class="profile__edit" type="button">Edit
+                    <button class="profile__edit" type="button" title="Edit profile">Edit
                         Profile</button>
-                    <div class="profile__stats">
+                    <div>
                         <ul class="stats__list">
                             <li class="stats__list-item">
-                                <a href="#" title="Followers">
+                                <a href="#">
                                     <svg>
                                         <use href="/Resources/sprite.svg#followers"></use>
                                     </svg>
@@ -102,13 +142,13 @@
                                 </a>
                             </li>
                             <li class="stats__list-item">
-                                <a href="#" title="Following">
+                                <a href="#">
                                     <b>10</b>
                                     <span>Following</span>
                                 </a>
                             </li>
                             <li class="stats__list-item">
-                                <a href="#" title="Stars">
+                                <a href="#">
                                     <svg>
                                         <use href="/Resources/sprite.svg#stars"></use>
                                     </svg>
@@ -119,35 +159,142 @@
                     </div>
                     <ul class="profile__links">
                         <li class="link__wrapper">
-                            <svg>
+                            <svg class="grey">
                                 <use href="/Resources/sprite.svg#organization"></use>
                             </svg>
-                            <a href="https://simform.com" >Simform</a>
+                            <a href="https://simform.com">Simform</a>
                         </li>
                         <li class="link__wrapper">
-                            <svg>
+                            <svg class="grey">
                                 <use href="/Resources/sprite.svg#email"></use>
                             </svg>
-                            <a href="mailto:vatsal.bharkhada@simform.com" >vatsal.bharkhada@simform.com</a>
+                            <a href="mailto:vatsal.bharkhada@simform.com">vatsal.bharkhada@simform.com</a>
                         </li>
                         <li class="link__wrapper">
-                            <svg>
+                            <svg class="grey">
                                 <use href="/Resources/sprite.svg#link"></use>
                             </svg>
-                            <a href="https://vatsalbharkhada.in" >vatsalbharkhada.in</a>
+                            <a href="https://vatsalbharkhada.in">vatsalbharkhada.in</a>
                         </li>
                         <li class="link__wrapper">
-                            <svg>
+                            <svg class="grey">
                                 <use href="/Resources/sprite.svg#githubId"></use>
                             </svg>
-                            <a href="https://github.com/vatsal2054" >Vatsal2054</a>
+                            <a href="https://github.com/vatsal2054">Vatsal2054</a>
                         </li>
                     </ul>
                 </div>
 
                 <!-- Pinned repositories and heatmap -->
-                <section class="user__info">
-                    <h3>Pinned repositories</h3>
+                <section class="userInfo">
+                    <div class="pinned">
+                        <div class="pinned__head">
+                            <h3>Pinned</h3>
+                            <button type="button" class="button__tertiary">Customize your pins</button>
+                        </div>
+                        <div class="pinned__list">
+                            <div class="pinned__repo">
+                                <div class="pinned__repo-head">
+                                    <a href="#" class="pinned__repo-link">
+                                        <svg class="grey">
+                                            <use href="/Resources/sprite.svg#repositories"></use>
+                                        </svg>
+                                        GDI-Front-End-Fundamentals-I
+                                    </a>
+                                    <span>
+                                        <svg>
+                                            <use href="/Resources/sprite.svg#grabber"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="pinned__repo-description">Front-End Fundamentals | Day - 1</div>
+                                <div class="pinned__repo-info">
+                                    <div class="language">
+                                            <div class="language-marker-html"></div>
+                                            HTML
+                                    </div>
+                                    <span class="stars">
+                                        <svg class="grey">
+                                            <use href="/Resources/sprite.svg#stars"></use>
+                                        </svg>
+                                        1
+                                    </span>
+                                    <span class="forks">
+                                        <svg class="grey">
+                                            <use href="/Resources/sprite.svg#forks"></use>
+                                        </svg>
+                                        2
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="pinned__repo">
+                                <div class="pinned__repo-head">
+                                    <a href="#" class="pinned__repo-link">
+                                        <svg class="grey">
+                                            <use href="/Resources/sprite.svg#repositories"></use>
+                                        </svg>
+                                        Infinity-pro-gbdog
+                                    </a>
+                                    <span>
+                                        <svg class="grey">
+                                            <use href="/Resources/sprite.svg#grabber"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="pinned__repo-description">Greater boston dog training - Theme customizations</div>
+                                <div class="pinned__repo-info">
+                                    <div class="language">
+                                        <div class="language-marker-css"></div>
+                                        CSS
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pinned__repo">
+                                <div class="pinned__repo-head">
+                                    <a href="#" class="pinned__repo-link">
+                                        <svg class="grey">
+                                            <use href="/Resources/sprite.svg#repositories"></use>
+                                        </svg>
+                                        Intro-to-Web-Design
+                                    </a>
+                                    <span>
+                                        <svg class="grey">
+                                            <use href="/Resources/sprite.svg#grabber"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="pinned__repo-description">Explore how to: add contrast, use continuity, align items, group elements together and ensure good readability.</div>
+                                <div class="pinned__repo-info">
+                                    <div class="language">
+                                        <div class="language-marker-html"></div>
+                                        HTML
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pinned__repo">
+                                <div class="pinned__repo-head">
+                                    <a href="#" class="pinned__repo-link">
+                                        <svg class="grey">
+                                            <use href="/Resources/sprite.svg#repositories"></use>
+                                        </svg>
+                                        Infinity-pro-robertdix
+                                    </a>
+                                    <span>
+                                        <svg class="grey">
+                                            <use href="/Resources/sprite.svg#grabber"></use>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <div class="pinned__repo-description">WP - musician site</div>
+                                <div class="pinned__repo-info">
+                                    <div class="language">
+                                        <div class="language-marker-css"></div>
+                                        CSS
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </section>
         </main>

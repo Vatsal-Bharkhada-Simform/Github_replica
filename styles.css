@@ -6,6 +6,8 @@
     --button-default-bgColor-hover: #eff2f5;
     --button-default-borderColor-active: #d1d9e0;
     --button-default-borderColor-hover: #d1d9e0;
+    --border-profile-image: #efecec;
+    --borderColor-default: #d1d9e0;
 
     /* Text and Icons */
     --var-color-text: #1f2328;
@@ -13,6 +15,8 @@
     --var-color-text-sec: #4e5158;
     --var-color-icon-sec: #ededed;
     --var-color-accent-blue: #0969da;
+    --text-neutral: #59636e;
+    --text-link: #0969da;
 
     /* Heatmap */
     --var-color-heatmap-default: #ededed;
@@ -37,7 +41,13 @@ body {
 }
 
 svg{
+    width: 1rem;
+    aspect-ratio: 1/1;
     vertical-align: middle;
+}
+
+svg.grey{
+    color: var(--var-color-text-sec);
 }
 
 /* --------------- Header Styles ---------------- */
@@ -127,19 +137,74 @@ svg{
     align-items: center;
 }
 
+.main__header{
+    width: 100%;
+    border-bottom: 1px solid var(--borderColor-default);
+}
+
+.main__header-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    width: 100%;
+    max-width: 1280px;
+    padding: 1.4rem 1rem 0 1rem;
+    margin: 0 auto;
+
+    .main__header-blankPart{
+        padding: 0 1rem;
+    }
+
+    .main__header-nav{
+        ul{
+            list-style-type: none;
+            display: flex;
+            padding-left: 1rem;
+
+            .main__header-links {
+                padding: .9rem 1rem;
+                
+                a, a:link, a:visited {
+                    text-decoration: none;
+                    font-size: .9rem;
+                    color: inherit;
+                    font-weight: 400;
+
+                    svg {
+                        margin-right: 3px;
+                    }
+
+                }
+                &:first-child{
+                    border-bottom: 2px solid orange;
+
+                    a {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .main__content {
-    display: flex;
-    align-items: flex-start;
-    min-width: 65vw;
-    padding-top: 3rem;
-    gap: 2rem;
+    flex: 1;
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 0 1rem;
 }
 
 .profile {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+    min-width: 0;
+
+    /* Move profile up to overlap on the header */
+    margin-top: -3.2rem;
 
     svg{
         width: 16px;
@@ -147,9 +212,26 @@ svg{
     }
 }
 
+.profile__img{
+    position: relative;
+    aspect-ratio: 1/1;
+}
+
 .profile__img-user {
     border-radius: 50%;
-    max-width: 100%;
+    width: 100%;
+    border: 2px solid var(--border-profile-image);
+}
+
+.profile__status{
+    position: absolute;
+    right: .5rem;
+    top: 72%;
+    background: var(--var-color-background);
+    display: inline;
+    padding: .55rem .6rem;
+    border: 1px solid var(--borderColor-default);
+    border-radius: 50%;
 }
 
 .profile__user-name{
@@ -170,6 +252,7 @@ svg{
     border-radius: 0.4rem;
     font-size: 0.9rem;
     font-weight: 500;
+    font-family: inherit;
 
     &:hover {
         cursor: pointer;
@@ -184,10 +267,7 @@ svg{
     align-items: center;
     font-size: 0.8rem;
     color: var(--var-color-text-sec);
-
-    b {
-        color: #222327;
-    }
+    flex-wrap: wrap;
 
     .stats__list-item {
         display: flex;
@@ -198,15 +278,14 @@ svg{
         a, a:link, a:visited{
             text-decoration: none;
             color: inherit;
-        }
-
-        svg {
-            vertical-align: middle;
-            color: var(--var-color-text-sec);
+            
+            b {
+                color: #222327;
+            }
         }
     }
 
-    li + li::before {
+    .stats__list-item + .stats__list-item::before {
         content: "·";
         margin: 0 -2px 0px 4px;
         color: #6b7280; 
@@ -227,6 +306,7 @@ svg{
         a, a:link, a:visited{
             text-decoration: none;
             color: inherit;
+            word-break: break-all;
         }
 
         a:hover{
@@ -235,6 +315,92 @@ svg{
     }
 }
 
-.user__info {
-    flex: 3;
+.userInfo {
+    padding: 1.5rem 1rem 1rem 1rem;
+}
+
+.pinned{
+
+    .pinned__head {
+        display: flex;
+        justify-content: space-between;
+
+        h3{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        button{
+            color: var(--text-neutral);
+        }
+    }
+
+    .pinned__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        padding: .5rem 0;
+
+        .pinned__repo{
+            display: flex;
+            flex-direction: column;
+            padding: 1rem;
+            border: 1px solid var(--borderColor-default);
+            border-radius: 6px;
+
+            .pinned__repo-head {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: .5rem;
+
+                .pinned__repo-link{
+                    text-decoration: none;
+                    font-size: .9rem;
+                    font-weight: 700;
+                    color: var(--text-link);
+                }   
+            }
+
+            .pinned__repo-description{
+                font-size: .8rem;
+                color: var(--text-neutral);
+                line-height: 1.4;
+                flex-grow: 1;
+            }
+            
+            .pinned__repo-info{
+                padding-top: .8rem;
+                color: var(--text-neutral);
+                font-weight: 500;
+
+                .language{
+                    font-size: .8rem;
+                    display: inline-block;
+
+                    .language-marker-html{
+                        display: inline-block;
+                        width: .8rem;
+                        aspect-ratio: 1/1;
+                        margin-bottom: -1px;
+                        border-radius: 50%;
+                        background-color: orangered;
+                    }
+                    
+                    .language-marker-css{
+                        display: inline-block;
+                        width: .8rem;
+                        aspect-ratio: 1/1;
+                        margin-bottom: -1px;
+                        border-radius: 50%;
+                        background-color: midnightblue;
+                    }
+                }
+
+                .stars, .forks{
+                    font-size: .8rem;
+                    margin-left: 1rem;
+                }
+            }
+        }
+    }
 }
